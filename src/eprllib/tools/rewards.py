@@ -1,16 +1,15 @@
 from typing import Any, Dict
 
 
-def reward_function_T3(config: Dict[str, Any], obs: dict, infos: dict) -> float:
+def reward_function_T3(config: Dict[str, Any], obs: Dict, infos: Dict) -> float:
     """This function returns the reward calcualted as the absolute value of the cube in the 
     difference between set point temperatur for comfort and the temperature measured in the 
     thermal zone when there are people in the zone but zero when is not.
 
     Args:
         config (Dict[str, Any]): env_config dictionary. Optionaly you can configurate the 'T_confot' variable.
-        obs (dict): Zone Mean Air Temperature for the Thermal Zone in °C.
-        infos (dict): infos dict must to provide the occupancy level and the Zone Mean Temperature.
-        agent_ids (list): list of agent acting in the environment.
+        obs (Dict): Zone Mean Air Temperature for the Thermal Zone in °C.
+        infos (Dict): infos dict must to provide the occupancy level and the Zone Mean Temperature.
 
     Returns:
         float: reward value
@@ -33,16 +32,15 @@ def reward_function_T3(config: Dict[str, Any], obs: dict, infos: dict) -> float:
             reward = 0.
     return reward
 
-def reward_function_T2(config: Dict[str, Any], obs: dict, infos: dict) -> float:
+def reward_function_T2(config: Dict[str, Any], obs: Dict, infos: Dict) -> float:
     """This function returns the reward calcualted as the absolute value of the square in the 
     difference between set point temperatur for comfort and the temperature measured in the 
     thermal zone when there are people in the zone but zero when is not.
 
     Args:
         config (Dict[str, Any]): env_config dictionary. Optionaly you can configurate the 'T_confot' variable.
-        obs (dict): Zone Mean Air Temperature for the Thermal Zone in °C.
-        infos (dict): infos dict must to provide the occupancy level and the Zone Mean Temperature.
-        agent_ids (list): list of agent acting in the environment.
+        obs (Dict): Zone Mean Air Temperature for the Thermal Zone in °C.
+        infos (Dict): infos dict must to provide the occupancy level and the Zone Mean Temperature.
 
     Returns:
         float: reward value
@@ -65,16 +63,15 @@ def reward_function_T2(config: Dict[str, Any], obs: dict, infos: dict) -> float:
             reward = 0.
     return reward
 
-def reward_function_T3_Energy(config: Dict[str, Any], obs: dict, infos: dict) -> float:
+def reward_function_T3_Energy(config: Dict[str, Any], obs: Dict, infos: Dict) -> float:
     """This function returns the reward calcualted as the absolute value of the cube in the 
     difference between set point temperatur for comfort and the temperature measured in the 
     thermal zone when there are people in the zone but zero when is not.
 
     Args:
         config (Dict[str, Any]): env_config dictionary. Optionaly you can configurate the 'T_confot' variable.
-        obs (dict): Zone Mean Air Temperature for the Thermal Zone in °C.
-        infos (dict): infos dict must to provide the occupancy level and the Zone Mean Temperature.
-        agent_ids (list): list of agent acting in the environment.
+        obs (Dict): Zone Mean Air Temperature for the Thermal Zone in °C.
+        infos (Dict): infos dict must to provide the occupancy level and the Zone Mean Temperature.
 
     Returns:
         float: reward value
@@ -102,16 +99,15 @@ def reward_function_T3_Energy(config: Dict[str, Any], obs: dict, infos: dict) ->
             reward = -beta_reward*(cooling_meter+heating_meter)
     return reward
     
-def PPD_Energy_reward(config: Dict[str, Any], obs: dict, infos: dict) -> float:
+def PPD_Energy_reward(config: Dict[str, Any], obs: Dict, infos: Dict) -> float:
     """This function returns the reward calcualted as the absolute value of the cube in the 
     difference between set point temperatur for comfort and the temperature measured in the 
     thermal zone when there are people in the zone but zero when is not.
 
     Args:
         config (Dict[str, Any]): env_config dictionary. Optionaly you can configurate the 'T_confot' variable.
-        obs (dict): Zone Mean Air Temperature for the Thermal Zone in °C.
-        infos (dict): infos dict must to provide the occupancy level and the Zone Mean Temperature.
-        agent_ids (list): list of agent acting in the environment.
+        obs (Dict): Zone Mean Air Temperature for the Thermal Zone in °C.
+        infos (Dict): infos dict must to provide the occupancy level and the Zone Mean Temperature.
 
     Returns:
         float: reward value
