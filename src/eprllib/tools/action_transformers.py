@@ -7,6 +7,21 @@ def thermostat_dual(agent_id, action):
     """This method take a discret action in the range of [0,4) and transforms it
     into a temperature of cooling or heating setpoints, depending the agent id 
     involve.
+
+    >>> thermostat_dual('cooling_setpoint', 0)
+    23
+
+    >>> thermostat_dual('coolind_setpoint', 1)
+    24
+
+    >>> thermostat_dual('heating_setpoint', 2)
+    19
+
+    >>> thermostat_dual('heating_setpoint', 3)
+    18
+
+    >>> thermostat_dual('bad_test', 1)
+    -1
     """
     if agent_id == 'cooling_setpoint':
         transform_action = 23 + action
