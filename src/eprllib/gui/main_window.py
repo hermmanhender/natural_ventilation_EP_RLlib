@@ -42,7 +42,7 @@ class ProcessSections(tk.Frame):
         """
         super().__init__(container, **kwargs)
 
-        start_config_window = ttk.Frame(self)
+        start_config_window = StartConfig(self)
         start_config_window.grid(column=0, row=0, sticky="NSEW")
 
         # The widgets are defined
